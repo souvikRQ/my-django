@@ -8,9 +8,9 @@ revolte:
       suggestFixes: true
       commentStyle: Balanced
     testSuite:
-      command: npm run test
+      command: python3 manage.py test
     automationTestSuite:
-      command: npm run test:automation
+      command: python3 manage.py test:automation
   workflow:
     developerWorkflow:
       enabled: true
@@ -24,13 +24,18 @@ revolte:
         rid_1:
           type: WEB_SERVICE
           name: web_service
-          entryPoint: index.js
+          entryPoint: python3 manage.py runserver 0.0.0.0:8080
           properties:
             health: /health
             port: 8080
             loadBalancerMode: dedicated
             variables:
-              BASE_URL: /api/v1
+              BASE_URL: /
+              DATABASE_HOST: ep-morning-night-aqfia1du.c-8.us-east-1.aws.neon.tech
+              DATABASE_PORT: 5432
+              DATABASE_USER: neondb_owner
+              DATABASE_PASSWORD: npg_f9oFWg0tTRym
+              DATABASE_NAME: neondb
           specifications:
             cpu: 2
             memory: 1
@@ -44,13 +49,18 @@ revolte:
         rid_1:
           type: WEB_SERVICE
           name: web_service
-          entryPoint: index.js
+          entryPoint: python3 manage.py runserver
           properties:
             health: /health
             port: 8080
             loadBalancerMode: dedicated
             variables:
-              BASE_URL: /api/v1
+              BASE_URL: /
+              DATABASE_HOST: ep-morning-night-aqfia1du.c-8.us-east-1.aws.neon.tech
+              DATABASE_PORT: 5432
+              DATABASE_USER: neondb_owner
+              DATABASE_PASSWORD: npg_f9oFWg0tTRym
+              DATABASE_NAME: neondb
           specifications:
             cpu: 2
             memory: 1
@@ -64,13 +74,18 @@ revolte:
         rid_1:
           type: WEB_SERVICE
           name: web_service
-          entryPoint: index.js
+          entryPoint: python3 manage.py runserver
           properties:
             health: /health
             port: 8080
             loadBalancerMode: dedicated
             variables:
-              BASE_URL: /api/v1
+              BASE_URL: /
+              DATABASE_HOST: ep-morning-night-aqfia1du.c-8.us-east-1.aws.neon.tech
+              DATABASE_PORT: 5432
+              DATABASE_USER: neondb_owner
+              DATABASE_PASSWORD: npg_f9oFWg0tTRym
+              DATABASE_NAME: neondb
           specifications:
             cpu: 2
             memory: 1
@@ -95,13 +110,18 @@ revolte:
         rid_1:
           type: WEB_SERVICE
           name: web_service
-          entryPoint: index.js
+          entryPoint: python3 manage.py runserver
           properties:
             health: /health
             port: 8080
             loadBalancerMode: dedicated
             variables:
-              BASE_URL: /api/v1
+              BASE_URL: /
+              DATABASE_HOST: ep-morning-night-aqfia1du.c-8.us-east-1.aws.neon.tech
+              DATABASE_PORT: 5432
+              DATABASE_USER: neondb_owner
+              DATABASE_PASSWORD: npg_f9oFWg0tTRym
+              DATABASE_NAME: neondb
           specifications:
             cpu: 2
             memory: 1
